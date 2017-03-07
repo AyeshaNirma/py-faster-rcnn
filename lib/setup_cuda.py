@@ -30,7 +30,7 @@ cudamat_ext = Extension('nms.gpu_nms',
                         language='c++',
                         libraries=cuda_libs,
                         extra_compile_args=nvcc_compile_args,
-                        include_dirs = [numpy_include, 'C:\\Programming\\CUDA\\v7.5\\include'])
+                        include_dirs = [numpy_include, 'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v7.5\\include'])
 
 
 class CUDA_build_ext(build_ext):
