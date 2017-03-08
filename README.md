@@ -1,3 +1,23 @@
+# Run py-faster-rcnn on windows
+
+My task is run py-faster-rcnn on windows. May it is useful to you.
+
+### My environment: Hardware
+
+I use the visual machine on Microsoft Azure.
+
+1. Processor: Intel(R) Xeon(R) CPU E5-2690 v3 @2.60GHC 2.60GHZ
+2. Installed memory(RAM): 56.0 GB
+3. Display adapters: NVIDIA Tesla K80
+
+### My environment: Software
+
+1. Windows server 2012 R2 64-bit
+2. Visual Stuidio 2013 (click [here]( http://download.microsoft.com/download/A/F/9/AF95E6F8-2E6E-49D0-A48A-8E918D7FD768/vs2013.5.iso) to download iso files)
+3. [CUDA 7.5](https://developer.nvidia.com/cuda-75-downloads-archive)
+4. [CUDNN 5.1](https://developer.nvidia.com/rdp/cudnn-download) (I choose the cuDNN v5.1 Library for Windows 10)
+5. [Aniconda](https://www.continuum.io/downloads) (I use Anaconda python 2.7 version 64-bit installer)
+
 ### Disclaimer
 
 The official Faster R-CNN code (written in MATLAB) is available [here](https://github.com/ShaoqingRen/faster_rcnn).
