@@ -94,6 +94,58 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
   
 ### Demo
 
-To run demo you need download prebuild models.
+To run demo you need download prebuild [models](http://www.cs.berkeley.edu/~rbg/faster-rcnn-data). Extract it and move the folder to `<py-faster-rcnn_root>\data\`.
+
+```make
+cd $py-faster-rcnn_root
+python ./tools/demo.py
+```
+
+You will see the demo pictures. Congratulations.
 
 ### Problems and solutions
+
+I will list some problems I meet. Hope it helpful to you.
+
+1. **error: Microsoft Visual C++ 9.0 is required. Get it from aka.ms/vcpython27**
+   
+   You may meet the error when you run `python setup.py install` or `python setup_cuda.py isntall`. In my experience downloading it according to the hint is not the right way. You can try the following command:
+   
+  ```make
+  # open command line
+  # The set value is depend on your visula studio version.
+  # visual studio 2013
+  SET VS90COMNTOOLS=%VS120COMNTOOLS%
+  
+  # # visual studio 2015
+  # SET VS90COMNTOOLS=%VS140COMNTOOLS%
+  # # visual studio 2012
+  # SET VS90COMNTOOLS=%VS110COMNTOOLS%
+  # # visual studio 2010
+  # SET VS90COMNTOOLS=%VS100COMNTOOLS%
+  ```
+  
+  If you have downloaded Visual C++ 9.0, uninstall it and try command again. I have downloaded it and run `python setup.py install`, another error like `Cannot open include file: 'stdbool.h': No such file or directory error: command <Visual_C++_root>\\9.0\\VC\\Bin\\amd64\\cl.exe' failed with exit status2` will occur.
+  
+2. **TypeError: object of type 'NoneType' has no len()**
+
+   ```make
+   os.path.dirname(find_executable("cl.exe", PATH))
+   File "D:\Anaconda2\lib\ntpath.py", line 215, in dirname
+   return split(p)[0]
+   File "D:\Anaconda2\lib\ntpath.py", line 180, in split
+   d, p = splitdrive(p)
+   File "D:\Anaconda2\lib\ntpath.py", line 115, in splitdrive
+   if len(p) > 1:
+   TypeError: object of type 'NoneType' has no len()
+   ```
+   
+   To solve this problems, add the `C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin` to your Environment Variables 'PATH'. Note that it is work only when you add the path to the `PATH` not the others.
+
+3. **AttributeError: ‘ProposalLayer’ object has no attribute ‘param_str_’**
+
+   Open the `<py-faster-rcnn_root>\lib\rpn\proposal_layer.py` and modify the `param_str_` to 'param_str'.
+   
+4. **pre_nms_topN  = cfg[cfg_key].RPN_PRE_NMS_TOP_N KeyError: '1'**
+
+   Modify the same file as before in line 64.
