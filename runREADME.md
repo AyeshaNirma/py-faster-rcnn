@@ -10,11 +10,11 @@ I refer the [caffe installation](http://www.cnblogs.com/LaplaceAkuir/p/6445189.h
 
 ### Contents
 
-1. [Cudnn installation](#Cudnn-installation)
-2. [Caffe installation](#Caffe-installation)
-3. [Faster rcnn installation](#py-faster-rcnn-installation)
-4. [Demo](#Demo)
-5. [Problems and solutions](#Problems-and-solutions)
+1. [Cudnn installation](#cudnn-installation)
+2. [Caffe installation](#caffe-installation)
+3. [Faster rcnn installation](#faster-rcnn-installation)
+4. [Demo](#demo)
+5. [Problems and solutions](#problems-and-solutions)
 
 ### Cudnn installation
 
