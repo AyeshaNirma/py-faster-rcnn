@@ -106,6 +106,7 @@ def train_rpn(queue=None, imdb_name=None, init_model=None, solver=None,
               max_iters=None, cfg=None):
     """Train a Region Proposal Network in a separate training process.
     """
+    from fast_rcnn.config import cfg
 
     # Not using any proposals, just ground-truth boxes
     cfg.TRAIN.HAS_RPN = True
