@@ -18,6 +18,12 @@ I use the visual machine on Microsoft Azure.
 4. [CUDNN 5.1](https://developer.nvidia.com/rdp/cudnn-download) (I choose the cuDNN v5.1 Library for Windows 10)
 5. [Aniconda](https://www.continuum.io/downloads) (I use Anaconda python 2.7 version 64-bit installer)
 
+Now, I will show you my experience. 
+
+Hope [here](https://github.com/OneDirection9/py-faster-rcnn/blob/master/runREADME.md) can help you to install faster-rcnn on windws.
+
+To be contined, I will try to train my own model for fun.
+
 ### Disclaimer
 
 The official Faster R-CNN code (written in MATLAB) is available [here](https://github.com/ShaoqingRen/faster_rcnn).
