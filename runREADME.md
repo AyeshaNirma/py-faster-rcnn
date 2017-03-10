@@ -149,3 +149,7 @@ I will list some problems I meet. Hope it helpful to you.
 4. **pre_nms_topN  = cfg[cfg_key].RPN_PRE_NMS_TOP_N KeyError: '1'**
 
    Modify the same file as before in line 64.
+
+5. **No module named 'cv2'**
+   
+   Download [OpenCV](http://opencv.org/) and extract it. Then copy the `<opencv_root>\build\python\2.7\x64\cv2.pyd` to `<python_root>\Lib\site-packages`.
