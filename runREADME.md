@@ -25,7 +25,7 @@ If you do that, you don't need to add `$Cudnn_PATH` to environment variables.
 
 I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that you have installed VS2013, CUDA7.5, and e.g.
 
-1. Clone `caffe` from github
+1. Clone [Microsoft caffe](https://github.com/Microsoft/caffe) from github
 
   ```make
   # recommond u to use --recursive
@@ -55,19 +55,19 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
    
 ### Faster rcnn installation
 
-1. Clone `py-faster-rcnn` from github
+1. Clone [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) from github
   
   ```make
   # recommond u use --recursive
   # because the py-faster-rcnn repository has a submodules.
-  git clone --recursive https://github.com/rbgirshick/py-faster-rcnn
+  git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
   ```
   
-2. Clone `lib` from github
+2. Clone [lib](https://github.com/MrGF/py-faster-rcnn-windows) from github
 
    Download the lib and replace it with the original lib provied by rbgirshick.
   ```make
-  git clone https://github.com/MrGF/py-faster-rcnn-windows
+  git clone https://github.com/MrGF/py-faster-rcnn-windows.git
   ```
   
 3. Copy `caffe` to `py-faster-rcnn`
