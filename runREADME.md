@@ -27,10 +27,10 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 1. Clone [Microsoft caffe](https://github.com/Microsoft/caffe) from github
 
-  ```make
-  # recommond u to use --recursive
-  git clone --recursive https://github.com/Microsoft/caffe.git
-  ```
+   ```make
+   # recommond u to use --recursive
+   git clone --recursive https://github.com/Microsoft/caffe.git
+   ```
 
 2. Copy `caffe/windows/CommonSettings.props.example` to `caffe/windows/CommonSettings.props`
 
