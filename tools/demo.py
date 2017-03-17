@@ -94,6 +94,17 @@ def demo(net, image_name):
         keep = nms(dets, NMS_THRESH)
         dets = dets[keep, :]
         vis_detections(im, cls, dets, thresh=CONF_THRESH)
+        # # show the bounding boxed in one picture
+        # inds = np.where(dets[:, -1] >= CONF_THRESH)[0]
+        # if len(inds) > 0:
+        #     for i in inds:
+        #         bbox = dets[i, : 4]
+        #         score = dets[i, -1]
+        #         cv2.rectangle(im, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (0, 255, 0), 3)
+        #         font = cv2.FONT_HERSHEY_SIMPLEX
+        #         cv2.putText(im, '{:s} {:.3f}'.format(cls, score), (bbox[0], bbox[1]), font, 0.5, (0,0,255),1)
+
+        # cv2.imwrite('D:/Test/py-faster-rcnn/output' + '/' + image_name, im)
 
 def parse_args():
     """Parse input arguments."""
