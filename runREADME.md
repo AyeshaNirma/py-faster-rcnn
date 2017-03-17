@@ -27,10 +27,10 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 1. Clone [Microsoft caffe](https://github.com/Microsoft/caffe) from github
 
-  ```make
-  # recommond u to use --recursive
-  git clone --recursive https://github.com/Microsoft/caffe.git
-  ```
+   ```make
+   # recommond u to use --recursive
+   git clone --recursive https://github.com/Microsoft/caffe.git
+   ```
 
 2. Copy `caffe/windows/CommonSettings.props.example` to `caffe/windows/CommonSettings.props`
 
@@ -38,11 +38,12 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 3. Install packages
   
-  Install some python dependency packages.
-  ```make
-  conda install --yes numpy scipy matplotlib scikit-image pip
-  pip install protobuf
-  ```
+   Install some python dependency packages.
+  
+   ```make
+   conda install --yes numpy scipy matplotlib scikit-image pip
+   pip install protobuf
+   ```
   
 4. Config faster-rcnn
 
@@ -57,18 +58,19 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 1. Clone [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) from github
   
-  ```make
-  # recommond u use --recursive
-  # because the py-faster-rcnn repository has a submodules.
-  git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
-  ```
+   ```make
+   # recommond u use --recursive
+   # because the py-faster-rcnn repository has a submodules.
+   git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+   ```
   
 2. Clone [lib](https://github.com/MrGF/py-faster-rcnn-windows) from github
 
    Download the lib and replace it with the original lib provied by rbgirshick.
-  ```make
-  git clone https://github.com/MrGF/py-faster-rcnn-windows.git
-  ```
+   
+   ```make
+   git clone https://github.com/MrGF/py-faster-rcnn-windows.git
+   ```
   
 3. Copy `caffe` to `py-faster-rcnn`
    
@@ -76,21 +78,22 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 4. Install depency packages
 
-  ```make
-  conda install numpy pyqt
-  ```
+   ```make
+   conda install numpy pyqt
+   ```
   
 5. Run
    
-  ```make
-  cd <py-faster-rcnn_root>\lib\
-  python setup.py install
-  ```
+   ```make
+   cd <py-faster-rcnn_root>\lib\
+   python setup.py install
+   ```
    
    Modify the cuda path in line 33 setup_cuda.py file.
-  ```make
-  python setup_cuda.py install
-  ```
+   
+   ```make
+   python setup_cuda.py install
+   ```
   
 ### Demo
 
@@ -111,21 +114,21 @@ I will list some problems I meet. Hope it helpful to you.
    
    You may meet the error when you run `python setup.py install` or `python setup_cuda.py isntall`. In my experience downloading it according to the hint is not the right way. You can try the following command:
    
-  ```make
-  # open command line
-  # The set value is depend on your visula studio version.
-  # visual studio 2013
-  SET VS90COMNTOOLS=%VS120COMNTOOLS%
+   ```make
+   # open command line
+   # The set value is depend on your visula studio version.
+   # visual studio 2013
+   SET VS90COMNTOOLS=%VS120COMNTOOLS%
   
-  # # visual studio 2015
-  # SET VS90COMNTOOLS=%VS140COMNTOOLS%
-  # # visual studio 2012
-  # SET VS90COMNTOOLS=%VS110COMNTOOLS%
-  # # visual studio 2010
-  # SET VS90COMNTOOLS=%VS100COMNTOOLS%
-  ```
+   # # visual studio 2015
+   # SET VS90COMNTOOLS=%VS140COMNTOOLS%
+   # # visual studio 2012
+   # SET VS90COMNTOOLS=%VS110COMNTOOLS%
+   # # visual studio 2010
+   # SET VS90COMNTOOLS=%VS100COMNTOOLS%
+   ```
   
-  If you have downloaded Visual C++ 9.0, uninstall it and try command again. I have downloaded it and run `python setup.py install`, another error like `Cannot open include file: 'stdbool.h': No such file or directory error: command <Visual_C++_root>\\9.0\\VC\\Bin\\amd64\\cl.exe' failed with exit status2` will occur.
+   If you have downloaded Visual C++ 9.0, uninstall it and try command again. I have downloaded it and run `python setup.py install`, another error like `Cannot open include file: 'stdbool.h': No such file or directory error: command <Visual_C++_root>\\9.0\\VC\\Bin\\amd64\\cl.exe' failed with exit status2` will occur.
   
 2. **TypeError: object of type 'NoneType' has no len()**
 
@@ -144,7 +147,7 @@ I will list some problems I meet. Hope it helpful to you.
 
 3. **AttributeError: ‘ProposalLayer’ object has no attribute ‘param_str_’**
 
-   Open the `<py-faster-rcnn_root>\lib\rpn\proposal_layer.py` and modify the `param_str_` to 'param_str'.
+   Open the `<py-faster-rcnn_root>\lib\rpn\proposal_layer.py` and modify the `param_str_` to 'param_str'.
    
 4. **pre_nms_topN  = cfg[cfg_key].RPN_PRE_NMS_TOP_N KeyError: '1'**
 
