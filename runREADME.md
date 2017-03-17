@@ -58,18 +58,19 @@ I use the [Microsoft caffe](https://github.com/Microsoft/caffe) and assume that 
 
 1. Clone [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) from github
   
-  ```make
-  # recommond u use --recursive
-  # because the py-faster-rcnn repository has a submodules.
-  git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
-  ```
+   ```make
+   # recommond u use --recursive
+   # because the py-faster-rcnn repository has a submodules.
+   git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+   ```
   
 2. Clone [lib](https://github.com/MrGF/py-faster-rcnn-windows) from github
 
    Download the lib and replace it with the original lib provied by rbgirshick.
-  ```make
-  git clone https://github.com/MrGF/py-faster-rcnn-windows.git
-  ```
+   
+   ```make
+   git clone https://github.com/MrGF/py-faster-rcnn-windows.git
+   ```
   
 3. Copy `caffe` to `py-faster-rcnn`
    
