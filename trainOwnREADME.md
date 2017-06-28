@@ -6,6 +6,8 @@ I refer [here](http://blog.csdn.net/sinat_30071459/article/details/51332084) for
 
 At first, you should label your data in the VOC format follow [here](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models). Then rename `VOCdevkit` to `VOCdevkit2007`.
 
+*Voc label format: xmin, ymin, xmax, ymax.*
+
 ## Problems and solutions
 
 1. **KeyError: 'max_overlaps'**
